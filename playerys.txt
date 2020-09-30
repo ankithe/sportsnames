@@ -1,0 +1,338 @@
+Calvin Ridley
+    Devin Singletary
+    Robert Woods
+    A.J. Brown
+    Mark Andrews
+    Mark Ingram
+    DK Metcalf
+    DJ Chark
+    Raheem Mostert
+    Tyler Lockett
+    Zach Ertz
+    Keenan Allen
+    Terry McLaurin
+    Kareem Hunt
+    T.Y. Hilton
+    Russell Wilson
+    D'Andre Swift
+    Ronald Jones
+    Courtland Sutton
+    Darren Waller
+    Cam Akers
+    Dak Prescott
+    A.J. Green
+    Kyler Murray
+    Stefon Diggs
+    Marquise Brown
+    Deshaun Watson
+    James White
+    DeVante Parker
+    Rob Gronkowski
+    J.K. Dobbins
+    Julian Edelman
+    Evan Engram
+    Marlon Mack
+    Will Fuller V
+    Brandin Cooks
+    Hayden Hurst
+    Michael Gallup
+    Jordan Howard
+    Drew Brees
+    Matt Breida
+    Jarvis Landry
+    Antonio Gibson
+    Matt Ryan
+    Tyler Boyd
+    Diontae Johnson
+    Tarik Cohen
+    Tyler Higbee
+    Tevin Coleman
+    Deebo Samuel
+    Tom Brady
+    Phillip Lindsay
+    Latavius Murray
+    Aaron Rodgers
+    Alexander Mattison
+    Marvin Jones
+    Hunter Henry
+    Josh Allen
+    Emmanuel Sanders
+    Kerryon Johnson
+    CeeDee Lamb
+    Zack Moss
+    Henry Ruggs III
+    49ers
+    Mecole Hardman
+    Carson Wentz
+    Darius Slayton
+    Sony Michel
+    Ke'Shawn Vaughn
+    Chase Edmonds
+    Jamison Crowder
+    Ravens
+    Matthew Stafford
+    Darrell Henderson
+    Jared Cook
+    Adrian Peterson
+    Jerry Jeudy
+    Christian Kirk
+    Steelers
+    Tony Pollard
+    Jalen Reagor
+    Cam Newton
+    Noah Fant
+    Duke Johnson
+    Bills
+    Daniel Jones
+    Justin Jefferson
+    Boston Scott
+    Sammy Watkins
+    DeSean Jackson
+    Sterling Shepard
+    Justin Jackson
+    Ben Roethlisberger
+    Damien Harris
+    Bears
+    A.J. Dillon
+    Anthony Miller
+    Darius Leonard
+    Brandon Aiyuk
+    Baker Mayfield
+    Patriots
+    Austin Hooper
+    Golden Tate
+    Chargers
+    Bobby Wagner
+    Joe Schobert
+    Cory Littleton
+    T.J. Hockenson
+    Blake Martinez
+    Joe Burrow
+    Tremaine Edmunds
+    Allen Lazard
+    Justin Tucker
+    T.J. Watt
+    Jordan Hicks
+    Mike Gesicki
+    Jared Goff
+    Harrison Butker
+    Chandler Jones
+    Aaron Donald
+    John Brown
+    Nyheim Hines
+    Buccaneers
+    Preston Williams
+    Bryce Love
+    Jamal Adams
+    Harrison Smith
+    Michael Pittman Jr.
+    Jaylon Smith
+    Jonnu Smith
+    Shaquil Barrett
+    Ryan Tannehill
+    Wil Lutz
+    Danielle Hunter
+    N'Keal Harry
+    Greg Zuerlein
+    Ryquell Armstead
+    Jimmy Garoppolo
+    Budda Baker
+    Seahawks
+    Eric Ebron
+    Dallas Goedert
+    Carlos Dunlap
+    Mike Williams
+    Jack Doyle
+    Kirk Cousins
+    Blake Jarwin
+    Drew Lock
+    Deion Jones
+    Breshad Perriman
+    Lavonte David
+    Bud Dupree
+    Jerome Baker
+    Saints
+    Curtis Samuel
+    Philip Rivers
+    Dolphins
+    Myles Garrett
+    Rams
+    Larry Fitzgerald
+    Teddy Bridgewater
+    Robbie Gould
+    Younghoe Koo
+    Landon Collins
+    Robby Anderson
+    Hunter Renfrow
+    Vonn Bell
+    Maxx Crosby
+    Vikings
+    De'Vondre Campbell
+    Chiefs
+    Cameron Jordan
+    Fred Warner
+    DeMario Davis
+    Cowboys
+    Packers
+    Bengals
+    Derwin James
+    Browns
+    Eagles
+    Titans
+    Broncos
+    Colts
+    Jaguars
+    Jake Elliott
+    Zane Gonzalez
+    Texans
+    Jordan Poyer
+    Ka'imi Fairbairn
+    Panthers
+    Zach Cunningham
+    Matt Prater
+    Dante Fowler, Jr.
+    Jamie Collins
+    K.J. Wright
+    Za'Darius Smith
+    Shawn Williams
+    Logan Ryan
+    Cameron Heyward
+    Jason Myers
+    Mason Crosby
+    DeForest Buckner
+    Dan Bailey
+    Brandon McManus
+    Devin White
+    Redskins
+    Devin Bush
+    Dede Westbrook
+    Parris Campbell
+    Minkah Fitzpatrick
+    Tyrell Williams
+    Joey Bosa
+    Nick Bosa
+    Eric Kendricks
+    Alshon Jeffery
+    Tracy Walker
+    J.J. Watt
+    Cole Beasley
+    James Washington
+    Randall Cobb
+    Danny Amendola
+    Corey Davis
+    Chris Conley
+    Steven Sims
+    Josh Reynolds
+    Denzel Mims
+    Mohamed Sanu
+    Darrynton Evans
+    Russell Gage
+    Jalen Richard
+    Adam Humphries
+    Marquez Valdes-Scantling
+    Jamaal Williams
+    Tee Higgins
+    Antonio Gandy-Golden
+    Miles Boykin
+    John Ross III
+    K.J. Hamler
+    Trent Taylor
+    Giovani Bernard
+    Gardner Minshew II
+    Willie Snead IV
+    Derek Carr
+    Rex Burkhead
+    Tre'Quan Smith
+    Jalen Hurd
+    Sam Darnold
+    Laviska Shenault Jr.
+    Chase Claypool
+    Ito Smith
+    Jaylen Samuels
+    Tua Tagovailoa
+    Tyrod Taylor
+    Kenny Stills
+    Lamical Perine
+    Royce Freeman
+    Dion Lewis
+    Dwayne Haskins Jr.
+    Jake Kumerow
+    Nick Foles
+    Nelson Agholor
+    Darwin Thompson
+    Rashaad Penny
+    Reggie Bonnafon
+    Van Jefferson
+    Justice Hill
+    Andy Isabella
+    Zach Pascal
+    Mitchell Trubisky
+    Greg Olsen
+    Jimmy Graham
+    KeeSean Johnson
+    Irv Smith Jr.
+    Jace Sternberger
+    Chris Herndon
+    Ian Thomas
+    Gerald Everett
+    Taysom Hill
+    Dawson Knox
+    Kyle Rudolph
+    Darren Fells
+    Keke Coutee
+    Tyler Eifert
+    Justin Herbert
+    Nick Boyle
+    Cole Kmet
+    Trey Burton
+    C.J. Uzomah
+    Dan Arnold
+    Jason Witten
+    Tyler Johnson
+    O.J. Howard
+    David Njoku
+    Ryan Fitzpatrick
+    Jeremy Sprinkle
+    Donovan Peoples-Jones
+    Vance McDonald
+    Anthony Firkser
+    Jordan Akins
+    Aldrick Rosas
+    Will Dissly
+    Daniel Carlson
+    Chase McLaughlin
+    Austin Seibert
+    Jason Sanders
+    Randy Bullock
+    Chris Boswell
+    Greg Joseph
+    Michael Badgley
+    Josh Lambo
+    Stephen Hauschka
+    Joey Slye
+    Matt Gay
+    Dustin Hopkins
+    Eddy Pineiro
+    Jets
+    Brett Maher
+    Falcons
+    Cardinals
+    Lions
+    Giants
+    Raiders
+    Kaden Smith
+    Chase Claypool
+    Jacob Hollister
+    Nelson Agholor
+    Andy Isabella
+    Drew Sample
+    Cameron Brate
+    Trey Burton
+    Laviska Shenault Jr.
+    Gabriel Davis
+    Van Jefferson
+    Keke Coutee
+    Cole Kmet
+    Jordan Thomas
+    Zach Pascal
+    Taysom Hill

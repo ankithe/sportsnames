@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="./nflplayers.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+        <script src="./script.js"></script>
+        <title>Sportsnames</title>
+    </head>
+    <body>
+        <div id= "title">
+            <h1> SportsNames</h1>
+        </div>
+
+        <div id="tableDiv">
+            <table id="Table"> 
+                <tr id = "row1">
+                    <td id = "elem0" onclick = renderClick2(this)></td>    
+                    <td id = "elem1" onclick = renderClick2(this)></td>
+                    <td id = "elem2" onclick = renderClick2(this)></td>
+                    <td id = "elem3" onclick = renderClick2(this)></td>
+                    <td id = "elem4" onclick = renderClick2(this)></td>
+                  </tr>
+                  <tr id = "row2">
+                    <td id = "elem5" onclick = renderClick2(this)></td>    
+                    <td id = "elem6" onclick = renderClick2(this)></td>
+                    <td id = "elem7" onclick = renderClick2(this)></td>
+                    <td id = "elem8" onclick = renderClick2(this)></td>
+                    <td id = "elem9" onclick = renderClick2(this)></td>
+                  </tr>
+                  <tr id = "row3">
+                    <td id = "elem10" onclick = renderClick2(this)></td>    
+                    <td id = "elem11" onclick = renderClick2(this)></td>
+                    <td id = "elem12" onclick = renderClick2(this)></td>
+                    <td id = "elem13" onclick = renderClick2(this)></td>
+                    <td id = "elem14" onclick = renderClick2(this)></td>
+                  </tr>
+                  <tr id = "row4">
+                    <td id = "elem15" onclick = renderClick2(this)></td>    
+                    <td id = "elem16" onclick = renderClick2(this)></td>
+                    <td id = "elem17" onclick = renderClick2(this)></td>
+                    <td id = "elem18" onclick = renderClick2(this)></td>
+                    <td id = "elem19" onclick = renderClick2(this)></td>
+                  </tr>
+                  <tr id = "row5">
+                    <td id = "elem20" onclick= renderClick2(this)></td>    
+                    <td id = "elem21" onclick= renderClick2(this)></td>
+                    <td id = "elem22" onclick= renderClick2(this)></td>
+                    <td id = "elem23" onclick= renderClick2(this)></td>
+                    <td id = "elem24" onclick= renderClick2(this)></td>
+                  </tr>
+
+            </table>
+        </div>
+
+        <div id="gameOptions">
+                <button id= "NewGameButton" type="button" onclick="restart();">New Game</button>
+                <button id="AnswersButton" type="button" onclick="toggleAnswers();">Show Answers</button>
+                <Text id="gameStatus"></Text>
+            </div>
+    
+
+        <div class="gameType">
+                <button id= "NBAGame" type="button" onclick= "loadNbaGame();" >Load NBA Game</button>
+                <button id="NFLGame" type="button" onclick= "loadNflGame();">Load NFL Game</button>
+                <button id= "SoccerGame" type="button">Load Soccer Game</button>
+                <button id="WordGame" type="button">Load Word Game</button>
+        </div>
+    </body>
+
+</html>
