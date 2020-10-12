@@ -7,7 +7,7 @@ var colors = {
 };
 
 var colorNames = ["Red", "Blue", "Neutral", "Assassin", "Default"];
-var cssColors = ["Red", "Blue", "Wheat", "DimGray", "Azure"];
+var cssColors = ["Red", "Blue", "Wheat", "DimGray", "Salmon"];
 var numOfWords = 25;
 
 var displayAnswers = false;
@@ -46,10 +46,10 @@ var listOfCells = {};
 window.onload = function() {
     // generateGame();
 
+    wordList = [];
+
     myDatabase.ref("answerList").once('value').then(function(ss){
-        console.log(ss.val()[0]);
         answerList[0] = ss.val()[0];
-        console.log(answerList[0]);
         answerList[1] = ss.val()[1];
         answerList[2] = ss.val()[2];
         answerList[3] = ss.val()[3];
@@ -105,7 +105,6 @@ window.onload = function() {
                 for(var i = 0; i < 25; i++){
                     var name = document.getElementById("elem" + i).innerHTML
                     if(ss.val()["elem" + i] == "y"){
-                        console.log(wordsMap)
                         document.getElementById("elem" + i).style.backgroundColor = cssColors[wordsMap[name]]
                     }
                 }
@@ -115,20 +114,53 @@ window.onload = function() {
 
     })
 
+
+    for(var i = 0; i < numOfWords; ++i) {
+        wordsMap[wordList[i]] = answerList[i];
+    }
+    
+
+
     myDatabase.ref("test").on('value', function(ss){
-        console.log("here")
-        console.log(ss.val())
+
 
         
 
         for(var i = 0; i < 25; i++){
             var name = document.getElementById("elem" + i).innerHTML
             if(ss.val()["elem" + i] == "y"){
-                console.log(wordsMap)
                 document.getElementById("elem" + i).style.backgroundColor = cssColors[wordsMap[name]]
             }
         }
     })
+
+    var turn;
+    var bleft;
+    var rleft;
+
+    myDatabase.ref("currentTurn").on('value', ss=>{
+        console.log(ss.val());
+
+        turn = ss.val()['currentTurn'];
+        currentTurn = turn;
+        document.getElementById("gameStatus").innerHTML = `Start Color: ` + cssColors[turn];
+
+    })
+
+        // myDatabase.ref("wordList").on('value', ss=>{
+    //     console.log(ss.val());
+    // })
+
+    myDatabase.ref("numOfBlueLeft").on('value', ss=>{
+        bleft= ss.val()['left'];
+        document.getElementById("colorsLeft").innerHTML = ` Number of Blue Left: ` + bleft + ` Number of Red Left ` + rleft;
+    })
+
+    myDatabase.ref("numOfRedLeft").on('value', ss=>{
+        rleft= ss.val()['left'];
+        document.getElementById("colorsLeft").innerHTML = ` Number of Blue Left: ` + bleft + ` Number of Red Left: ` + rleft;
+    })
+
 };
 
 function restart() {
@@ -173,10 +205,44 @@ function restart() {
 }
 
 function loadNbaGame(){
-    var Table = document.getElementById("Table");
-    Table.innerHTML = "";
-    randLimit = 115;
-    generateNewGame("nba");
+    var updates = {};
+
+    var updateWordList = {};
+
+    var updateAnswerList = {};
+
+
+    var newWords = chooseNewWords("nba")
+
+    var newAnswers = getAnswerList()[0];
+
+    for(var i = 0; i<25; i++){
+        updates["elem" + i] = "n"
+    }
+
+    for(var i = 0; i <25; i++){
+        updateWordList[i] = newWords[i]
+    }
+
+    for(var i = 0; i <25; i++){
+        updateAnswerList[i] = newAnswers[i]
+    }
+
+
+    firebase.database().ref("test").update(updates)
+
+    firebase.database().ref("wordList").update(updateWordList)
+
+    firebase.database().ref("answerList").update(updateAnswerList)
+
+    // generate new word list
+
+    // generate new answer list
+    
+    // set all of test to "n"
+
+    //loadGame()
+    loadBoard(newWords,updateAnswerList);
 }
 
 function loadNflGame(){
@@ -336,7 +402,6 @@ function generateGame() {
     gameState["clickedWords"] = clickedWords;
     gameState["currentTurn"] = currentTurn;
  
-    console.log(gameState);
     
 
     document.getElementById("gameStatus").innerHTML = `<b>Current Turn:</b> <span style='color:` + cssColors[currentTurn] + `'>` + colorNames[currentTurn] + `<span>` + `<p style = 'color: Blue'> Number of Blue Left: ` + gameState['numOfBlueLeft'] + `<p>` + `<p style = 'color: Red'> Number of Red Left: ` + numOfRedLeft + `<p>` ;
@@ -410,14 +475,33 @@ function getAnswerList() {
 
 
     if(startColor == colors.RED){
+        numOfRedLeft +=1;
         gameState['numOfRedLeft'] +=1;
     }
     else{
+        numOfBlueLeft +=1;
         gameState['numOfBlueLeft'] +=1
     }
 
+    console.log();
+
     shuffleArray(answerList);
-    
+
+
+    myDatabase.ref("numOfRedLeft").set({
+        'left': gameState['numOfRedLeft']
+    })
+
+    myDatabase.ref("numOfBlueLeft").set({
+        'left': gameState['numOfBlueLeft']
+    })
+
+    myDatabase.ref("currentTurn").set({
+        'currentTurn': startColor
+    })
+
+    // document.getElementById("gameStatus").innerHTML = `<b>Current Turn:</b> <span style='color:` + cssColors[currentTurn] + `'>` + colorNames[currentTurn] + `<span>` + `<p style = 'color: Blue'> Number of Blue Left: ` + gameState['numOfBlueLeft'] + `<p>` + `<p style = 'color: Red'> Number of Red Left: ` + numOfRedLeft + `<p>` ;
+
     return [answerList, startColor];
 }
 
@@ -461,6 +545,65 @@ function renderClick2(event){
     var k = event.id;
     var updates = {};
     updates[k] = "y"
+    var currRed;
+    var currBlue;
+    var newRed;
+    var newBlue;
+    var bupdates = {};
+    var rupdates = {};
+
+    var myWords = []
+    var myMap = {}
+
+    for(var i = 0; i < 25; i++){
+        myWords[i] = wordList[i];
+    }
+
+    for(var i = 0; i <25; i++){
+        myMap[myWords[i]] = answerList[i];
+    }
+
+    var secondToLastChar = k.charAt(k.length-2);
+
+    var colorClicked;
+
+    if(isNaN(secondToLastChar)){
+        colorClicked = myMap[myWords[k.charAt(k.length-1)]];
+
+    }else{
+        colorClicked = myMap[myWords[secondToLastChar+k.charAt(k.length-1)]]
+    }
+
+
+
+    if(colorClicked == 1){
+        myDatabase.ref("numOfBlueLeft").once('value').then(function(ss){
+            currBlue = ss.val()['left'];
+            newBlue = currBlue -1;
+            bupdates['left'] = newBlue;
+            myDatabase.ref("numOfBlueLeft").update(bupdates);
+        })
+    }
+    else if(colorClicked == 0){
+        myDatabase.ref("numOfRedLeft").once('value').then(function(ss){
+            currRed = ss.val()['left'];
+            newRed = currRed -1;
+            rupdates['left'] = newRed;
+            myDatabase.ref("numOfRedLeft").update(rupdates)
+        })
+    }else if(colorClicked == 3){
+        document.getElementById("colorsLeft").innerHTML = ` Game Over You Clicked the Bomb`
+        alert("Game Over You Clicked the Bomb - Click New Game")
+    }
+
+
+
+
+
+    // myDatabase.ref("numOfBlueLeft").update(bupdates);
+
+    // myDatabase.ref("numOfRedLeft").update(rupdates)
+
 
     firebase.database().ref("test").update(updates)
 
